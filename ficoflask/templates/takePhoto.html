@@ -1,0 +1,41 @@
+{% extends 'layout.html'%}
+
+{%block content%}
+<section class="main">
+<div class="container">
+  <div class= "takePhoto">
+    <br>
+    <center><p>Take Photo</p>
+      <div class="booth">
+        <video id="video" width="380" height="300" autoplay></video>
+        <br><input class="photoBtn" id="photoBtn" type=button value="Take Photo"><br><br>
+        <canvas id="canvas" width="380" height="300" ></canvas>
+      </div></center><br>
+
+      <center><div class="form-group mt-4">
+    		<input type="submit" id="calculateBtn" class='btn btn-primary' value="Save"></input>
+    	</div></center><br><br>
+
+    <div class="container w-50">
+      <div class="form-group">
+        <p>Let's go for fish counting!</p>
+      <center>
+        {{form.upload_image.label()}}
+        {{form.upload_image(class="form-control-file")}}
+        {%if form.upload_image.errors%}
+          {%for error in form.upload_image.errors %}
+            <span class="text-danger">{{error}}</span><br>
+          {%endfor%}
+        {%endif%}
+      </center>
+      </div>
+      <center><div class="form-group mt-4">
+    		{{form.submit(class = 'btn btn-primary')}}
+    	</div></center>
+   <br><br>
+   <script src="static/video.js"></script>
+  </div>
+</div>
+</section>
+
+{%endblock content%}

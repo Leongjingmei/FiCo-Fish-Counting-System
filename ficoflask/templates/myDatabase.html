@@ -1,0 +1,38 @@
+{% extends 'layout.html'%}
+
+{%block content%}
+<div class="myDatabase">
+	<br><br>
+	<title>Results</title>
+	<div class="container w-50">
+		<legend class="border-bottom mb-4" style="font-weight=bold; font-size=20px">{{legend}}</legend><br>
+		{%if myData%}
+			<table class= "table table-striped"  width = '100%'>
+			    <thead>
+			       <tr>
+			         <th scope="col">Image</th>
+			         <th scope="col">Detected Image</th>
+			         <th scope="col">Fish Count</th>
+			         <th scope="col">Date Created</th>
+							 <th scope="col"></th>
+			        </tr>
+			      </thead>
+						<tbody>
+							 {%for row in myData%}
+								<tr>
+								 <th scope="row"><img src="{{row.image_file}}" alt="" style="width:150px; height:150px"></th>
+								 <th><img src="{{row.detected_image}}" alt="" style="width:150px; height:150px"></th>
+								 <th>{{row.fish_count}}</th>
+								 <th>{{row.date_created}}</th>
+								 <th><a href="{{url_for('resultPage', image_url = row.image_file)}}">Details</th>
+								</tr>
+								{%endfor%}
+							</tbody>
+				</table>
+		{%else%}
+			<p>Let's start fish counting !</p>
+		{%endif%}
+	</div>
+<br><br>
+</div>
+{%endblock content%}

@@ -1,0 +1,39 @@
+{% extends 'layout.html'%}
+
+{%block content%}
+<section class="main">
+  <div class="card text-center">
+  <div class="card-body">
+    <div class="container w-50">
+      <form method="POST" action="" enctype="multipart/form-data">
+        {{form.hidden_tag()}}
+    	<fieldset class= "form-group">
+    		<legend class="border-bottom mb-4" style="font-weight=bold; font-size=20px">{{legend}}</legend><br>
+        <div class="takePhoto">
+                  <p>Take Photo Using Camera</p>
+                  <a href="{{ url_for('takePhoto') }}" class='btn btn-primary'>Take Photo</a>
+        </div>
+
+            <br><br><h4>OR</h4><br><br>
+
+    		<div class="form-group">
+        <center>
+    			{{form.upload_image.label()}}
+    			{{form.upload_image(class="form-control-file")}}
+    			{%if form.upload_image.errors%}
+    				{%for error in form.upload_image.errors %}
+    					<span class="text-danger">{{error}}</span><br>
+    				{%endfor%}
+    			{%endif%}
+        </center>
+    		</div>
+
+      </fieldset>
+    <center><div class="form-group mt-4">
+  		{{form.submit(class = 'btn btn-primary')}}
+  	</div></center>
+    </form>
+    </div>
+  </div>
+</section>
+{%endblock content%}

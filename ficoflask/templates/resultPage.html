@@ -1,0 +1,19 @@
+{% extends 'layout.html'%}
+
+{%block content%}
+<section class = "resultPage">
+<div class="container w-50">
+	<br><legend class="border-bottom mb-4" style="font-weight=bold; font-size=20px">{{legend}}</legend><br>
+	<center>
+		{%for row in resultData%}
+			<p> Your Image : </p>
+				<p><img src="{{row.image_file}}" alt="" style="width:300px; height:300px"></p><br>
+			<p> Processed Image : </p>
+				<p><img src="{{row.detected_image}}" alt="" style="width:300px; height:300px"></p><br>
+				<p>Fish Count : {{row.fish_count}} </p><br>
+		{%endfor%}
+		<a href="{{ url_for('homepage') }}" class='btn btn-primary'>Try Another Photo</a><br><br>
+	</center>
+</div>
+</section>
+{%endblock content%}
