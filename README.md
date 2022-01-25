@@ -4,7 +4,7 @@ A image-based fish larvae counting system using trained YOLOv5
 ## Instructions To Use
 #### Requirements : Python 3.8 or above.
 
-1. Open Command Prompt, type
+1. Open Command Prompt, type \
 `cd path_you_save_the_folder`
 
 2. Create virtual environment following the instructions include in the website: https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/26/python-virtual-env/
@@ -24,7 +24,7 @@ pgAdmin: https://www.pgadmin.org/download/pgadmin-4-windows/
 6. Set Up PostgreSQL Database
 Open SQL Shell.
 
-#####In SQL Shell,
+##### In SQL Shell,
 Click four times enter to connect to the database. Enter the password you set when you install postgreSQL.
 
 Create a user in PostgreSQL, type
@@ -43,10 +43,10 @@ Create a database, type
 Connect postgres user to database, type
 `\c ficodatabase2 ficopostgres;`
 
-#####In the ficoflask\__init__.py line 10,
+##### In the ficoflask\__init__.py line 10,
 Make sure the database url follow the format `postgresql://postgres_user_name:postgres_user_passsword@localhost:5432/postgres_database_name`
 
-#####In command prompt,
+##### In command prompt,
 `python
 from ficoflask import db
 db.create_all()`
@@ -63,4 +63,4 @@ It will appear `[]`
 8. In command prompt, type
 `python run.py`
 
-You will be able to access to website 'localhost:5000'.
+You will be able to access to system by typing in your browser 'localhost:5000'.
