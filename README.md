@@ -20,7 +20,7 @@ You will now see your virtual environment name with a bracket at the front of cu
 5. Download and Install PostgreSQL server. \
 PostgreSQL: https://www.postgresql.org/   \
 Please remember the password set in the postgreSQL installation. It will be used later. \
-![alt text](https://github.com/Leongjingmei/FiCo-Fish-Counting-System/images/postgres_pw.jpeg?raw=true)
+![alt text](https://github.com/Leongjingmei/FiCo-Fish-Counting-System/blob/main/images/postgres_pw.jpeg)
  \
 6. Set Up PostgreSQL Database \
 Open SQL Shell. \
