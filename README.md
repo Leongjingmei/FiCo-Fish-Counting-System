@@ -55,7 +55,8 @@ Make sure the database url follow the format `postgresql://postgres_user_name:po
 
 #### In command prompt,
 `python` \
-`from ficoflask import db`  \ 
+`from ficoflask import db`
+\
 `db.create_all()` \
 \
 To check the database is connected,  \
