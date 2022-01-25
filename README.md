@@ -38,13 +38,13 @@ alter user ficopostgres with createdb;`
 \
 Check the role of your user. \
 `\du`
-It should be look like this: \
+It should be look like this: 
 
 \
 To create a database, type \
 `create database ficodatabase2;`
  \
-![alt text](https://github.com/Leongjingmei/FiCo-Fish-Counting-System/blob/main/images/user_role.jpeg)
+![alt text](https://github.com/Leongjingmei/FiCo-Fish-Counting-System/blob/main/images/user_role.png)
 \
 Connect postgres user to database, type \
 `\c ficodatabase2 ficopostgres;`
@@ -61,7 +61,6 @@ To check the database is connected,  \
 `from ficoflask.models import User
 User.query.all()`
 
-\
 
 It should appear `[]` if the database is connected.
 
