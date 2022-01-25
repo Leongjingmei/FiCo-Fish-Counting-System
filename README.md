@@ -1,21 +1,21 @@
 # FiCo-Fish-Counting-System
 A image-based fish larvae counting system using trained YOLOv5
 
-# Instructions To Use
-Requirements : Python 3.8 or above.
+## Instructions To Use
+#### Requirements : Python 3.8 or above.
 
 1. Open Command Prompt, type
-cd path_you_save_the_folder
+'cd path_you_save_the_folder'
 
 2. Create virtual environment following the instructions include in the website: https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/26/python-virtual-env/
 
-3. In command prompt type
-your_virtual_environment_name\Scripts\activate
+3. In command prompt, type
+'your_virtual_environment_name\Scripts\activate'
 
 You will now see your virtual environment name with a bracket at the front of current path.
 
 4. Install the requirements.txt in the virtual environment.
-pip install -r requirements.txt
+'pip install -r requirements.txt'
 
 5. Download PostgreSQL server and newest version of pgAdmin.
 PostgreSQL: https://www.postgresql.org/
