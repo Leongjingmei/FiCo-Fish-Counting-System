@@ -50,10 +50,12 @@ To create a database, type \
 Connect postgres user to database, type \
 `\c ficodatabase2 ficopostgres;`
 
-#### In the ficoflask\__init__.py line 10, 
+#### In the ficoflask\ __init__.py line 10, 
 Make sure the database url follow the format `postgresql://postgres_user_name:postgres_user_passsword@localhost:5432/postgres_database_name`
 
 #### In command prompt,
+To create the tables in ficoflask\models.py
+\
 `python` \
 `from ficoflask import db`
 \
