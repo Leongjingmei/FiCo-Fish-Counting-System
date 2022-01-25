@@ -39,12 +39,12 @@ alter user ficopostgres with createdb;`
 Check the role of your user. \
 `\du`
 It should be look like this: 
-
+ \
+![alt text](https://github.com/Leongjingmei/FiCo-Fish-Counting-System/blob/main/images/user_role.PNG)
 \
 To create a database, type \
 `create database ficodatabase2;`
- \
-![alt text](https://github.com/Leongjingmei/FiCo-Fish-Counting-System/blob/main/images/user_role.PNG)
+
 \
 Connect postgres user to database, type \
 `\c ficodatabase2 ficopostgres;`
@@ -53,13 +53,13 @@ Connect postgres user to database, type \
 Make sure the database url follow the format `postgresql://postgres_user_name:postgres_user_passsword@localhost:5432/postgres_database_name`
 
 #### In command prompt,
-`python`
-`from ficoflask import db`
-`db.create_all()`
+`python` \
+`from ficoflask import db` \ 
+`db.create_all()` \
 \
 To check the database is connected,  \
-`from ficoflask.models import User`
-`User.query.all()`
+`from ficoflask.models import User` \
+`User.query.all()` \
 
 
 It should appear `[]` if the database is connected.
